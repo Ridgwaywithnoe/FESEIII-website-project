@@ -5,16 +5,16 @@ Here’s a clean, copy-paste README you can drop into your repo on GitHub. It’
 
 ---
 
-# 🌐 Community Website Project
+# Community Website Project
 
-## 📌 Overview
+## Overview
 
 This is a collaborative class project to build a website for Olympia Indivisible.
 We are working together using GitHub to manage code, track changes, and stay organized.
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 / (root)
@@ -42,7 +42,7 @@ We are working together using GitHub to manage code, track changes, and stay org
 
 ---
 
-## 🚀 How to Get Started
+## How to Get Started
 
 ### 1. Clone the repository
 
@@ -63,11 +63,11 @@ Always get the latest version:
 
 ---
 
-## 🔄 Workflow (VERY IMPORTANT)
+## Workflow (VERY IMPORTANT)
 
-### 🚫 Do NOT work directly on `main`
+### Do NOT work directly on `main`
 
-### ✅ Always follow these steps:
+### Always follow these steps:
 
 1. **Create a new branch**
 
@@ -103,7 +103,7 @@ Always get the latest version:
 
 ---
 
-## 📁 File Organization Rules
+## File Organization Rules
 
 * Keep files in the correct folders:
 
@@ -119,7 +119,7 @@ Always get the latest version:
 
 ---
 
-## ✏️ Naming Conventions
+## Naming Conventions
 
 Use consistent, simple names:
 
@@ -133,7 +133,7 @@ Use lowercase and dashes if needed:
 
 ---
 
-## ⚠️ Important Reminders
+## Important Reminders
 
 * Pull before you start working
 * Don’t overwrite other people’s work
@@ -142,7 +142,7 @@ Use lowercase and dashes if needed:
 
 ---
 
-## 🧰 Tools
+## Tools
 
 We recommend using:
 
@@ -151,7 +151,7 @@ We recommend using:
 
 ---
 
-## 🙋 Need Help?
+## Need Help?
 
 If you get stuck:
 
@@ -160,7 +160,7 @@ If you get stuck:
 
 ---
 
-## 🎯 Goal
+## Goal
 
 Work together, stay organized, and build something we’re proud of.
 
