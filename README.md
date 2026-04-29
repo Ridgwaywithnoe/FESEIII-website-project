@@ -33,6 +33,10 @@ We are working together using GitHub to manage code, track changes, and stay org
 │     └── about.html
 │     └── contact.html
 │
+├── /components/
+│     └── header.js
+│     └── footer.js
+|
 └── /docs/
 ```
 
