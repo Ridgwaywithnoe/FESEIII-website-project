@@ -12,7 +12,7 @@ We are working together using GitHub to manage code, track changes, and stay org
 ## Project Structure
 
 ```
-/ (root)
+/ (root*)
 │── index.html
 │── README.md
 │
@@ -35,6 +35,7 @@ We are working together using GitHub to manage code, track changes, and stay org
 |
 └── /docs/
 ```
+> *Only index.html and README.md should be in root at any time.
 
 ---
 
@@ -96,22 +97,6 @@ Always get the latest version:
    * Add a short description
 
 6. **Wait for review before merging**
-
----
-
-## File Organization Rules
-
-* Keep files in the correct folders:
-
-  * CSS → `/css`
-  * JS → `/js`
-  * Images → `/images`
-  * Pages → `/pages`
-
-* Only these files go in the root:
-
-  * `index.html`
-  * `README.md`
 
 ---
 
