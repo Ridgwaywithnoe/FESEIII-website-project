@@ -1,7 +1,7 @@
 Spring 2026 group project for Evergreen State College
 
 temp edit for kat-branch
-
+test
 
 **AI GENERATED**
 Here’s a clean, copy-paste README you can drop into your repo on GitHub. It’s written for beginners and keeps your workflow simple and clear.
