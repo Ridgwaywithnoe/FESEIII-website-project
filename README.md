@@ -7,7 +7,7 @@ Here’s a clean, copy-paste README you can drop into your repo on GitHub. It’
 
 ## 📌 Overview
 
-This is a collaborative class project to build a website for a local organization.
+This is a collaborative class project to build a website for Olympia Indivisible.
 We are working together using GitHub to manage code, track changes, and stay organized.
 
 ---
