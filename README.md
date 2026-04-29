@@ -5,7 +5,7 @@ Here’s a clean, copy-paste README you can drop into your repo on GitHub. It’
 
 ---
 
-# Community Website Project
+# Olympia Indivisible Website Overhaul
 
 ## Overview
 
@@ -28,6 +28,7 @@ We are working together using GitHub to manage code, track changes, and stay org
 │     └── script.js
 │
 ├── /images/
+│     └── logo.png
 │
 ├── /pages/
 │     └── about.html
