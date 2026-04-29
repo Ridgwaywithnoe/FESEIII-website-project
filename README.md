@@ -1,11 +1,5 @@
-Spring 2026 group project for Evergreen State College
-
-**AI GENERATED**
-Here’s a clean, copy-paste README you can drop into your repo on GitHub. It’s written for beginners and keeps your workflow simple and clear.
-
----
-
 # Olympia Indivisible Website Overhaul
+# Evergreen State College - Spring 2026
 
 ## Overview
 
@@ -164,11 +158,3 @@ If you get stuck:
 ## Goal
 
 Work together, stay organized, and build something we’re proud of.
-
----
-
-If you want, I can:
-
-* Customize this with your actual org name + team roles
-* Add a Kanban / task section
-* Or simplify it even more if your class is *very* beginner-heavy
