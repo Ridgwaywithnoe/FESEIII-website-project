@@ -1,4 +1,4 @@
-Olympia Indivisible Website Overhaul
+Olympia Indivisible Website Overhaul<br>
 Evergreen State College - Spring 2026
 =====================================
 
