@@ -63,8 +63,8 @@ Always get the latest version:
 * Do not work directly on main branch
 * Make sure someone isn't working on the same thing you are before you start
 * Make a new branch for each feature added and always make draft pull requests
-* Branch/file naming should be lowercase, looking like 'feature/nickname-specific-feature'<br>(i.e. 'feature/jed-readme-update')
-* Keep files in right folders
+* Branch naming should be all lowercase, looking like 'feature/nickname-specific-feature'<br>(i.e. 'feature/jed-readme-update')
+* File naming should be all lowercase, looking like 'name.html' or 'another-name.html' <br> and placed in the respective folders
 * Commits should be short and concise and like third-person <br>(i.e. 'Update navigation' or 'Add something-random.html in pages')
 * When finished, mark draft pull request as ready to review and wait
 
