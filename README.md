@@ -60,66 +60,15 @@ Always get the latest version:
 
 ---
 
-## Workflow (VERY IMPORTANT)
+## Notes
 
-### Do NOT work directly on `main`
-
-### Always follow these steps:
-
-1. **Create a new branch**
-
-   * Click “Current Branch” → “New Branch”
-   * Name it something like:
-
-     * `feature/homepage`
-     * `feature/about-page`
-     * `fix/navbar`
-
-2. **Make your changes**
-
-   * Add/edit files in the correct folders
-
-3. **Commit your changes**
-
-   * Write a clear message:
-
-     * “Add homepage layout”
-     * “Fix navigation links”
-
-4. **Push your branch**
-
-   * Click “Push origin”
-
-5. **Create a Pull Request (PR)**
-
-   * Open the repo on GitHub
-   * Click “Compare & pull request”
-   * Add a short description
-
-6. **Wait for review before merging**
-
----
-
-## Naming Conventions
-
-Use consistent, simple names:
-
-* `about.html` ✅
-* `contact.html` ✅
-* `aboutPage.html` ❌
-
-Use lowercase and dashes if needed:
-
-* `team-members.html` ✅
-
----
-
-## Important Reminders
-
-* Pull before you start working
-* Don’t overwrite other people’s work
-* Ask if you’re unsure where something goes
-* Keep commits small and clear
+* Do not work directly on main branch
+* Make sure someone isn't working on the same thing you are before you start
+* Make a new branch for each feature added and always make draft pull requests
+* Branch/file naming should be lowercase, looking like 'feature/nickname-specific-feature'<br>(i.e. 'feature/jed-readme-update')
+* Keep files in right folders
+* Commits should be short and concise and like third-person <br>(i.e. 'Update navigation' or 'Add something-random.html in pages')
+* When finished, mark draft pull request as ready to review and wait
 
 ---
 
@@ -132,7 +81,7 @@ We recommend using:
 
 ---
 
-## Need Help?
+## Assistance
 
 If you get stuck:
 
