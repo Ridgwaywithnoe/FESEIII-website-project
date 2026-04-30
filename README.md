@@ -1,10 +1,8 @@
-Olympia Indivisible Website Overhaul<br>
-Evergreen State College - Spring 2026
-=====================================
+# Olympia Indivisible Website Overhaul
 
 ## Overview
 
-This is a collaborative class project to build a website for Olympia Indivisible.
+This is a collaborative class project by Evergreen State College of Spring 2026 to build a website for Olympia Indivisible.<br>
 We are working together using GitHub to manage code, track changes, and stay organized.
 
 ---
