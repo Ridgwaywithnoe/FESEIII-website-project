@@ -1,23 +1,16 @@
-Spring 2026 group project for Evergreen State College
+# Olympia Indivisible Website Overhaul
 
-**AI GENERATED**
-Here’s a clean, copy-paste README you can drop into your repo on GitHub. It’s written for beginners and keeps your workflow simple and clear.
+## Overview
 
----
-
-# 🌐 Community Website Project
-
-## 📌 Overview
-
-This is a collaborative class project to build a website for Olympia Indivisible.
+This is a collaborative class project by Evergreen State College of Spring 2026 to build a website for Olympia Indivisible.<br>
 We are working together using GitHub to manage code, track changes, and stay organized.
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
-/ (root)
+/ (root*)
 │── index.html
 │── README.md
 │
@@ -28,17 +21,23 @@ We are working together using GitHub to manage code, track changes, and stay org
 │     └── script.js
 │
 ├── /images/
+│     └── logo.png
 │
 ├── /pages/
 │     └── about.html
 │     └── contact.html
 │
+├── /components/
+│     └── header.js
+│     └── footer.js
+|
 └── /docs/
 ```
+> *Only index.html and README.md should be in root at any time.
 
 ---
 
-## 🚀 How to Get Started
+## How to Get Started
 
 ### 1. Clone the repository
 
@@ -59,86 +58,19 @@ Always get the latest version:
 
 ---
 
-## 🔄 Workflow (VERY IMPORTANT)
+## Notes
 
-### 🚫 Do NOT work directly on `main`
-
-### ✅ Always follow these steps:
-
-1. **Create a new branch**
-
-   * Click “Current Branch” → “New Branch”
-   * Name it something like:
-
-     * `feature/homepage`
-     * `feature/about-page`
-     * `fix/navbar`
-
-2. **Make your changes**
-
-   * Add/edit files in the correct folders
-
-3. **Commit your changes**
-
-   * Write a clear message:
-
-     * “Add homepage layout”
-     * “Fix navigation links”
-
-4. **Push your branch**
-
-   * Click “Push origin”
-
-5. **Create a Pull Request (PR)**
-
-   * Open the repo on GitHub
-   * Click “Compare & pull request”
-   * Add a short description
-
-6. **Wait for review before merging**
+* Do not work directly on main branch
+* Make sure someone isn't working on the same thing you are before you start
+* Make a new branch for each feature added and always make draft pull requests
+* Branch naming should be all lowercase, looking like 'feature/nickname-specific-feature'<br>(i.e. 'feature/jed-readme-update')
+* File naming should be all lowercase, looking like 'name.html' or 'another-name.html' <br> and placed in the respective folders
+* Commits should be short and concise and like third-person <br>(i.e. 'Update navigation' or 'Add something-random.html in pages')
+* When finished, mark draft pull request as ready to review and wait
 
 ---
 
-## 📁 File Organization Rules
-
-* Keep files in the correct folders:
-
-  * CSS → `/css`
-  * JS → `/js`
-  * Images → `/images`
-  * Pages → `/pages`
-
-* Only these files go in the root:
-
-  * `index.html`
-  * `README.md`
-
----
-
-## ✏️ Naming Conventions
-
-Use consistent, simple names:
-
-* `about.html` ✅
-* `contact.html` ✅
-* `aboutPage.html` ❌
-
-Use lowercase and dashes if needed:
-
-* `team-members.html` ✅
-
----
-
-## ⚠️ Important Reminders
-
-* Pull before you start working
-* Don’t overwrite other people’s work
-* Ask if you’re unsure where something goes
-* Keep commits small and clear
-
----
-
-## 🧰 Tools
+## Tools
 
 We recommend using:
 
@@ -147,7 +79,7 @@ We recommend using:
 
 ---
 
-## 🙋 Need Help?
+## Assistance
 
 If you get stuck:
 
@@ -156,14 +88,6 @@ If you get stuck:
 
 ---
 
-## 🎯 Goal
+## Goal
 
 Work together, stay organized, and build something we’re proud of.
-
----
-
-If you want, I can:
-
-* Customize this with your actual org name + team roles
-* Add a Kanban / task section
-* Or simplify it even more if your class is *very* beginner-heavy
