@@ -1,64 +1,257 @@
 <template>
-  <el-menu
-    mode="horizontal"
-    class="main-menu"
-  >
-    <!-- Home -->
-    <el-menu-item index="home">
-      Home
-    </el-menu-item>
+  <nav class="navbar">
 
-    <!-- Take Action -->
-    <el-sub-menu index="take-action">
-      <template #title>Take Action</template>
+    <!-- Logo / Site Name -->
+    <div class="logo">
+      Olympia Indivisible
+    </div>
 
-      <el-menu-item index="register-to-vote">
-        Register to Vote
+    <!-- Mobile Hamburger -->
+    <div
+      class="hamburger"
+      @click="mobileMenuOpen = !mobileMenuOpen"
+    >
+      ☰
+    </div>
+
+    <!-- Desktop Menu -->
+    <el-menu
+      mode="horizontal"
+      class="main-menu desktop-menu"
+      background-color="#1A2A42"
+      text-color="#FFFAF1"
+      active-text-color="#F4BC4F"
+    >
+      <!-- Home -->
+      <el-menu-item index="home">
+        Home
       </el-menu-item>
 
-      <el-menu-item index="take-action-network">
-        Take Action Network
-      </el-menu-item>
-    </el-sub-menu>
+      <!-- Take Action -->
+      <el-sub-menu index="take-action">
+        <template #title>Take Action</template>
 
-    <!-- Join Us -->
-    <el-sub-menu index="join-us">
-      <template #title>Join Us</template>
+        <el-menu-item index="register-to-vote">
+          Register to Vote
+        </el-menu-item>
 
-      <el-menu-item index="member-sign-up">
-        Member Sign Up
-      </el-menu-item>
+        <el-menu-item index="take-action-network">
+          Take Action Network
+        </el-menu-item>
+      </el-sub-menu>
 
-      <el-menu-item index="new-member-orientation">
-        New Member Orientation
-      </el-menu-item>
+      <!-- Join Us -->
+      <el-sub-menu index="join-us">
+        <template #title>Join Us</template>
 
-      <el-menu-item index="oi-events-calendar">
-        OI Events Calendar
-      </el-menu-item>
+        <el-menu-item index="member-sign-up">
+          Member Sign Up
+        </el-menu-item>
 
-      <el-menu-item index="oi-program">
-        OI Program
-      </el-menu-item>
-    </el-sub-menu>
+        <el-menu-item index="new-member-orientation">
+          New Member Orientation
+        </el-menu-item>
 
-    <!-- Resources -->
-    <el-sub-menu index="resources">
-      <template #title>Resources</template>
+        <el-menu-item index="oi-events-calendar">
+           Events Calendar
+        </el-menu-item>
 
-      <el-menu-item index="guides">
-        Guides
-      </el-menu-item>
+        <el-menu-item index="oi-program">
+           Program
+        </el-menu-item>
+      </el-sub-menu>
 
-      <el-menu-item index="contacts">
-        Contacts
-      </el-menu-item>
-    </el-sub-menu>
-  </el-menu>
+      <!-- Resources -->
+      <el-sub-menu index="resources">
+        <template #title>Resources</template>
+
+        <el-menu-item index="guides">
+          Guides
+        </el-menu-item>
+
+        <el-menu-item index="contacts">
+          Contacts
+        </el-menu-item>
+      </el-sub-menu>
+    </el-menu>
+
+    <!-- Mobile Menu -->
+    <div
+      v-if="mobileMenuOpen"
+      class="mobile-menu"
+    >
+      <a href="#">Home</a>
+
+      <div class="mobile-section">
+        <h4>Take Action</h4>
+
+        <a href="#">Register to Vote</a>
+        <a href="#">Take Action Network</a>
+      </div>
+
+      <div class="mobile-section">
+        <h4>Join Us</h4>
+
+        <a href="#">Member Sign Up</a>
+        <a href="#">New Member Orientation</a>
+        <a href="#">Events Calendar</a>
+        <a href="#">Program</a>
+      </div>
+
+      <div class="mobile-section">
+        <h4>Resources</h4>
+
+        <a href="#">Guides</a>
+        <a href="#">Contacts</a>
+      </div>
+    </div>
+
+  </nav>
 </template>
 
+<script setup>
+import { ref } from 'vue'
+
+const mobileMenuOpen = ref(false)
+</script>
+
 <style scoped>
+.navbar {
+  position: relative;
+  background: #1A2A42;
+  border-bottom: 1px solid #2d3f5f;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px 20px;
+  color: #f4BC4F;
+}
+
 .main-menu {
   border-bottom: none;
+  background: #1A2A42;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+
+  color: #F4BC4F;
+
+  transition:
+    transform 2s ease,
+    background-color 0.3s ease,
+    font-weight 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: #B6C6DF;
+  font-weight: bold;
+  transform: scale(1.05);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+/* Desktop Menu Hover Effects */
+:deep(.el-menu-item),
+:deep(.el-sub-menu__title) {
+  color: #FFFAF1 !important;
+
+  transition:
+    transform 2s ease,
+    background-color 0.3s ease,
+    font-weight 0.3s ease;
+}
+
+:deep(.el-menu-item:hover),
+:deep(.el-sub-menu__title:hover) {
+  background-color: #B6C6DF !important;
+  color: #1A2A42 !important;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+/* Dropdown Menu Styling */
+:deep(.el-menu--popup) {
+  background-color: #1A2A42 !important;
+}
+
+:deep(.el-menu--popup .el-menu-item) {
+  color: #FFFAF1 !important;
+}
+
+:deep(.el-menu--popup .el-menu-item:hover) {
+  background-color: #B6C6DF !important;
+  color: #1A2A42 !important;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  gap: 16px;
+
+  background: #1A2A42;
+  border-top: 1px solid #2d3f5f;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #FFFAF1;
+
+  transition:
+    transform 2s ease,
+    background-color 0.3s ease,
+    font-weight 0.3s ease;
+
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.mobile-menu a:hover {
+  background-color: #B6C6DF;
+  color: #1A2A42;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.mobile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-section h4 {
+  margin: 10px 0 4px;
+  color: #F4BC4F;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 </style>
