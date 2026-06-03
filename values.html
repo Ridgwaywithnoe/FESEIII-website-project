@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Values - Olympia Indivisible</title>
+
+  <!-- Google Font Setup -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Vue -->
+  <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js"></script>
+
+  <!-- Element Plus -->
+  <script src="https://unpkg.com/element-plus@2.5.6/dist/index.full.js"></script>
+
+  <!-- Element Plus Icons -->
+  <script src="https://unpkg.com/@element-plus/icons-vue@2.3.2/dist/index.iife.js"></script>
+
+  <!-- Element Plus CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.5.6/dist/index.css">
+
+  <!-- Barlow Condensed -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&display=swap">
+
+  <!-- Public Sans -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap">
+  
+  <style>
+
+    /* Font Styles */
+    /* .barlow-condensed-medium {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .barlow-condensed-bold {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .public-sans-regular {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .public-sans-bold {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+    } */
+    
+    /* Header Styling */
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .el-container {
+      z-index: 0;
+    }
+
+    .el-header {
+      margin: 0;
+      padding: 0;
+      background-color: #FFFAF1;
+      border-bottom: 1px solid #10161E;
+    }
+
+    /* Skip links */
+    .skip-link {
+      position: absolute;
+      margin: 1em;
+      padding: 1em;
+      z-index: 99;
+      background-color: white;
+      color: black;
+      border-radius: 1em;
+      border: 1px solid black; 
+    }
+    
+    .skip-link:not(:focus):not(:active) {
+      clip-path: inset(50%);
+    }
+
+    .logo {
+      margin: 1em;
+      font-size: 1em;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      color: #10161E;
+    }
+
+    .logo-highlight {
+      margin-left: 0.25em;
+      padding: 0.25em;
+      background-color: #1A5C8A;
+      color: #FFFAF1;
+    }
+
+    .logo:hover {
+      border-bottom: none;
+      color: #10161E;
+    }
+
+    .logo.is-underline:hover:after {
+      border-bottom: none;
+    }
+
+    .el-menu-item > .el-link,
+    .el-sub-menu__title {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: #10161E;
+    }
+
+    .el-menu {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    .el-menu--horizontal.el-menu {
+      background-color: #FFFAF1;
+      border-bottom: 1px solid #10161E;
+    }
+
+    /* Makes submenu bg paper color */
+    .el-menu--horizontal .el-menu .el-menu-item,
+    .el-menu--horizontal .el-menu .el-sub-menu__title {
+      background-color: #FFFAF1;
+    }
+
+    @keyframes slideLeft {
+      from { right: -50% }
+      to { right: 0%; }
+    }
+
+    @keyframes slideRight {
+      from { right: 0%; }
+      to { right: -50%; }
+    }
+
+    /* Mobile Flyout */
+    #mobile-flyout {
+      display: none;
+      position: absolute;
+      top: 0%;
+      right: -50%;
+      width: 70%;
+      overflow-x: hidden;
+      border-top-left-radius: 1em;
+      border-bottom-left-radius: 1em;
+      border: 1px solid #10161E;
+      height: 100%;
+    }
+
+    #main-nav-open,
+    #main-nav-close {
+      border: 1px solid #10161E;
+      background-color: #FFFAF1;
+      color: #10161E;
+    }
+
+    #main-nav-open {
+      margin: 1em;
+    }
+
+    #main-nav-close {
+      margin-left: 1em;
+      margin-top: 1em;
+    }
+
+    #mobile-flyout {
+      background-color: #FFFAF1;
+      color: #10161E;
+      z-index: 99;
+    }
+
+    /* Makes submenu bg paper color */
+    .el-menu--vertical .el-menu .el-menu-item,
+    .el-menu--vertical .el-menu .el-sub-menu__title {
+      background-color: #FFFAF1;
+    }
+
+    /* Main Styling */
+    .el-main {
+      margin: 0;
+      padding: 0;
+      background-color: #FFFAF1;
+      color: #10161E;
+      z-index: 0;
+    }
+
+    /* Hero */
+    /* Centers elements and organizes through columns */
+    .hero {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 3em;
+      color: #1A2A42;
+    }
+
+
+    .hero-desc {
+      margin: 0 1em;
+      font-family: "Public Sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      margin-bottom: .25em;
+    }
+
+    .hero-subtitle {
+      font-family: "Public Sans", sans-serif;
+      font-style: italic;
+      font-size: 1.1em;
+      color: #10161E;
+      margin-top: -2em;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+
+    /* For all paragraphs */
+    p {
+      line-height: 1.5;
+    }
+
+    /* For all icons currently */
+    .el-icon {
+      margin: 0 0.25em;
+    }
+
+    .right-arrow {
+      display: inline-block;
+      width: inherit;
+      height: inherit;
+      --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='black' d='M754.752 480H160a32 32 0 1 0 0 64h594.752L521.344 777.344a32 32 0 0 0 45.312 45.312l288-288a32 32 0 0 0 0-45.312l-288-288a32 32 0 1 0-45.312 45.312z'/%3E%3C/svg%3E");
+      background-color: currentColor;
+      -webkit-mask-image: var(--svg);
+      mask-image: var(--svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+    }
+
+    /* Hero Links */
+    .hero-btn1 {
+      background-color: #F4BC4F;
+    }
+    .hero-btn1 .el-link {
+      color: #10161E;
+    }
+
+    .hero-btn2 {
+      background-color: #1A5C8A;
+    }
+    .hero-btn2 .el-link {
+      color: #FFFAF1;
+    }
+
+    .hero-btn3 {
+      background-color: #1A2A42;
+    }
+    .hero-btn3 .el-link {
+      color: #FFFAF1;
+    }
+
+    /* Info values */
+    .info-values {
+      display: flex;
+      flex-direction: column;
+      padding: 2em 1em;
+      background-color: #FFFAF1;
+      color: #10161E;
+      align-items: center;
+    }
+
+    .info-values-title, .info-values-desc {
+      width: 95%;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left; 
+    }
+
+
+    .info-values-title h2 {
+      margin: 0.25em 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .info-values-title span {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .info-values-desc li {
+      max-width: 700px;
+      margin: 0;
+      margin-top: 1em;
+      margin-bottom: .5em;
+      margin-left: auto;
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .info-values-button {
+      width: fit-content;
+      border: none;
+      background-color: #1A2A42;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      box-shadow: 0 2px 0 #BBB;
+    }
+
+    .info-values-button .el-link {
+      color: #FFFAF1;
+      font-size: 1.25em;
+    }
+
+    /* Info agreement */
+    .info-agreement {
+      padding: 4em 1em;
+      background-color: #B6C6DF;
+      color: #10161E;
+    }
+
+    .info-agreement-title {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .info-agreement-title h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      text-transform: uppercase;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+
+    .info-agreement-title span {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .info-agreement-article {
+      max-width: 800px;
+      width: 90%;
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    .info-agreement-article h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      margin: 1em 0;
+    }
+
+    .info-agreement-article p {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      margin: 0;
+      margin-bottom: 1em;
+    }
+
+    .info-agreement-article .el-button {
+      border: none;
+      margin: 0;
+      padding: 0;
+      background-color: #FFFAF1;
+      color: #1A2A42;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .info-agreement-article .el-button .el-link {
+      color: #1A2A42;
+      font-size: 1.25em;
+    }
+
+    .info-agreement .el-collapse {
+      border: none;
+      --el-collapse-header-bg-color: transparent;
+      --el-collapse-content-bg-color: transparent;
+      --el-collapse-border-color: #1A5C8A;
+    }
+
+    .info-agreement .el-collapse-item__header {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: 1.25em;
+      color: #1A2A42;
+      height: auto;
+      line-height: 1.4;
+      padding: 1em 0;
+    }
+
+    .info-agreement .el-collapse-item__content {
+      font-family: "Public Sans", sans-serif;
+      font-size: 1.1em;
+      color: #10161E;
+      padding-bottom: 1.5em;
+    }
+
+    .info-agreement .el-collapse-item__content ul {
+      margin: 0;
+      padding-left: 1.5em;
+    }
+
+    .info-agreement .el-collapse-item__content li {
+      margin-bottom: 0.25em;
+    }
+
+    /* Footer Styling */
+    .el-footer {
+      margin: 0;
+      padding: 0;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      background-color: #1A2A42;
+      color: #FFFAF1;
+    }
+
+    /* Weekly Email */
+    .info-email {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3em 1em;
+    }
+
+    .info-email-title {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .info-email-title h2 {
+      margin: 0.5em 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      text-align: center;
+      color: #F4BC4F;
+    }
+
+    .info-email-title span {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      color: #B6C6DF;
+    }
+
+    .info-email-desc {
+      margin: 0;
+      text-align: center;
+    }
+
+    .info-email-link {
+      margin: 1em;
+      margin-bottom: 0;
+      padding: 1em;
+      width: fit-content;
+      border-radius: 0.5em;
+      background-color: #FFFAF1;
+      color: #1A2A42;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* List of Nav Links */
+    .info-link-spam {
+      display: flex;
+      flex-flow: row wrap;
+      margin: 1em;
+      background-color: #1A2A42;
+      gap: 0 1em;
+    }
+
+    .info-link-menu {
+      background-color: #1A2A42;
+      border: none;
+      width: fit-content;
+    }
+
+    .info-link-menu:not(.el-menu--collapse):not(.el-menu--popup-container) .el-menu-item {
+      padding: 0;
+    }
+
+    .info-link-menu h2 {
+      color: #F4BC4F;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      margin-bottom: 0;
+      font-size: 1.25em;
+    }
+
+    .info-link-menu .el-menu-item {
+      margin: 0;
+      padding: 0;
+      height: 2em;
+    }
+
+    .info-link-menu .el-menu-item .el-link {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: #FFFAF1;
+    }
+
+    /* Social Icon Links */
+    .social-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .social-row .el-icon {
+      margin: 0.5em;
+      padding: 0;
+      color: #F4BC4F;
+      font-size: 1.5em;
+    }
+
+    /* Address & Copyright */
+    .copyright {
+      margin: 0;
+      margin-bottom: 1em;
+      padding: 0;
+    }
+
+    .copyright p {
+      margin: 0.5em;
+      text-align: center;
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 0.75em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <el-container>
+      <el-header>
+      <!-- Skip Links -->
+      <el-link
+        class="skip-link"
+        href="#main"
+      >
+        Skip to main
+      </el-link>
+
+      <el-link
+        class="skip-link"
+        href="#footer"
+      >
+        Skip to footer
+      </el-link>
+
+      <script>
+        console.log(window.location.pathname)
+      </script>
+
+      <!-- Desktop Top Nav -->
+      <div
+        v-if="false"
+        class="top-nav"
+        style="display: flex;"
+      >
+        <el-link class="logo" href="index.html" aria-label="Olympia Indivisible Home">
+          OLYMPIA
+          <span class="logo-highlight">
+            INDIVISIBLE
+          </span>
+        </el-link>
+
+        <!-- Desktop Nav -->
+        <el-menu
+          mode="horizontal"
+          style="justify-content: flex-end;"
+        >
+          <!-- Home -->
+          <el-menu-item index="1">
+            <el-link href="http://olyind.csevg.com/index.html">HOME</el-link>
+          </el-menu-item>
+
+          <!-- Take Action -->
+          <el-sub-menu index="2">
+            <template #title>TAKE ACTION</template>
+
+            <el-menu-item index="2-1">
+              <el-link href="https://voter.votewa.gov/portal2023/login.aspx">REGISTER TO VOTE</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="2-2">
+              <el-link href="http://olyind.csevg.com/take-action.html">TAKE ACTION NETWORK</el-link>
+            </el-menu-item>
+          </el-sub-menu>
+
+          <!-- Join Us -->
+          <el-sub-menu index="3">
+            <template #title>JOIN US</template>
+
+            <el-menu-item index="3-1">
+              <el-link href="http://olyind.csevg.com/join-us.html#:~:text=STEP%201-,MEMBER%20SIGN%20UP,-Interested%20in%20joining">MEMBER SIGN UP</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="3-2">
+              <el-link href="http://olyind.csevg.com/join-us.html#:~:text=NEW%20MEMBER%20ORIENTATION">NEW MEMBER ORIENTATION</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="3-3">
+              <el-link href="">OI EVENTS CALENDAR</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="3-4">
+              <el-link href="">OI PROGRAMS</el-link>
+            </el-menu-item>
+          </el-sub-menu>
+
+          <!-- Resources -->
+          <el-sub-menu index="4">
+            <template #title>RESOURCES</template>
+
+            <el-menu-item index="4-1">
+              <el-link href="http://olyind.csevg.com/resources.html#guides">GUIDES</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="4-2">
+              <el-link href="http://olyind.csevg.com/resources.html#reps">CONTACT REPRESENTATIVES</el-link>
+            </el-menu-item>
+          </el-sub-menu>
+
+          <!-- Donate -->
+          <el-menu-item index="5">
+            <el-link href="https://www.paypal.com/donate/?hosted_button_id=9W5X94XD4GSBG">DONATE</el-link>
+          </el-menu-item>
+        </el-menu>
+
+        <script>
+          console.log(document.querySelector(`[index="1"]`))
+        </script>
+      </div>
+
+      <!-- Mobile Top Nav -->
+      <div
+        v-else
+        class="top-nav"
+        style="display: flex; justify-content: space-between;"
+      >
+        <el-link class="logo" href="">
+          OLYMPIA
+          <span class="logo-highlight">
+            INDIVISIBLE
+          </span>
+        </el-link>
+
+        <!-- Nav Open Button -->
+        <el-button
+          id="main-nav-open"
+          @click="openNav"
+        >
+          =
+        </el-button>
+      </div>
+      
+      <!-- Mobile Flyout -->
+      <el-menu
+        id="mobile-flyout"
+        mode="vertical"
+      >
+        <!-- Nav Close Button -->
+        <el-button
+          id="main-nav-close"
+          @click="closeNav"
+        >
+          X
+        </el-button>
+
+        <!-- Home -->
+        <el-menu-item index="1">
+          <el-link href="http://olyind.csevg.com/index.html">Home</el-link>
+        </el-menu-item>
+
+        <!-- Take Action -->
+        <el-sub-menu index="2">
+          <template #title>Take Action</template>
+
+          <el-menu-item index="2-1">
+            <el-link href="https://voter.votewa.gov/portal2023/login.aspx">Register to Vote</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="2-2">
+            <el-link href="http://olyind.csevg.com/take-action.html">Take Action Network</el-link>
+          </el-menu-item>
+        </el-sub-menu>
+
+        <!-- Join Us -->
+        <el-sub-menu index="3">
+          <template #title>Join Us</template>
+
+          <el-menu-item index="3-1">
+            <el-link href="http://olyind.csevg.com/join-us.html#:~:text=STEP%201-,MEMBER%20SIGN%20UP,-Interested%20in%20joining">Member Sign Up</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="3-2">
+            <el-link href="http://olyind.csevg.com/join-us.html#:~:text=NEW%20MEMBER%20ORIENTATION">New Member Orientation</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="3-3">
+            <el-link href="">OI Events Calendar</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="3-4">
+            <el-link href="">OI Programs</el-link>
+          </el-menu-item>
+        </el-sub-menu>
+
+        <!-- Resources -->
+        <el-sub-menu index="4">
+          <template #title>Resources</template>
+
+          <el-menu-item index="4-1">
+            <el-link href="http://olyind.csevg.com/resources.html#guides">Guides</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="4-2">
+            <el-link href="http://olyind.csevg.com/resources.html#reps">Contact Representatives</el-link>
+          </el-menu-item>
+        </el-sub-menu>
+
+        <!-- Donate -->
+        <el-menu-item index="5">
+          <el-link href="https://www.paypal.com/donate/?hosted_button_id=9W5X94XD4GSBG">Donate</el-link>
+        </el-menu-item>
+      </el-menu>        
+      </el-header>
+
+      <el-main>
+        <div class="hero">
+         <h1>
+          Olympia Indivisble Core Values
+        </h1>
+
+        <div class="hero-subtitle">
+        <p>With Principles of Inclusion, Tolerance, Truth, Fairness</p>
+        </div>
+        
+        <p class="hero-desc">
+          Olympia Indivisible is united by a commitment to the principles of fairness, 
+          inclusion, tolerance and a just society for all, <br> through non-violent civic engagement, 
+          political involvement, and consistent pressure on elected officials. 
+        </p> 
+        </div>
+
+        <div class="info-values">
+          <div class="info-values-title">
+            <h2>Human Rights</h2>
+          </div>
+            <div class="info-values-desc">
+              <ul>
+                <li>Universal human rights and democratically elected governments are essential for the freedom of all people. </li>
+                <li>Affordable housing and food security are basic human rights.</li>
+                <li>All people deserve to live safely without government, police, or community harassment.</li>
+              </ul>
+            </div>
+          <div class="info-values-title">
+            <h2>Governance</h2>
+          </div>
+            <div class="info-values-desc">
+              <ul>
+                <li>A democratically elected government that is transparent, accountable, and responsive best serves the people of this country.</li>
+                <li>We deserve a democracy in which each of us is represented and has a voice — and a government that works for every American, 
+                  not just the wealthy few. Corporations are not people and money is not speech. </li> <!-- Replace em desh? It was in the original -->
+                <li>A person's right to vote is foundational. Voting must be fair, verifiable, and secure in all communities. 
+                  Laws and policies should work to increase access to and participation in democratic elections. </li>
+                <li>Religion and government must be separate.</li>  
+              </ul>
+            </div>
+          <div class="info-values-title">
+            <h2>Environment</h2>
+          </div>
+            <div class="info-values-desc">
+              <ul>
+                <li>The environmental sustainability of our planet is vital and the key to peace and security for all.</li>
+              </ul>
+            </div>
+          <div class="info-values-title">
+            <h2>Healthcare</h2>
+          </div>
+            <div class="info-values-desc">
+              <ul>
+                <li>Access to affordable healthcare is a universal right.</li>
+                <li>People have the right to bodily autonomy and to pursue their healthcare and 
+                  reproductive choices without fear of criminalization or penalty.</li>
+              </ul>
+            </div>
+          <div class="info-values-title">
+            <h2>Economy</h2>
+          </div>
+            <div class="info-values-desc">
+              <ul>
+                <li>All Americans deserve the opportunity to work for living-wage employment, 
+                  receive job training, and have safe working conditions.</li>
+                <li>We value and support the right of all workers to unionize and engage in collective bargaining.</li>
+                <li>Support for small businesses is essential for new job creation.</li>
+                <li>Banking and financial institution regulation is essential for protecting consumers.</li>
+                <li>Access to high-speed broadband connectivity is essential to ensuring economic opportunity in urban and rural America.</li>
+                <li>Our economy must be sustainable for our community, cultures, and the planet.</li>
+              </ul>
+            </div>
+          <div class="info-values-title">
+            <h2>Civil Rights</h2>
+          </div>
+            <div class="info-values-desc">
+              <ul>
+                <li>All people deserve equal rights protections with freedom from discrimination under the law. 
+                  Systemic structures and individual acts denying civil rights of people must be challenged.</li>
+              </ul>
+            </div>
+          <div class="info-values-title">
+            <h2>Education</h2>
+          </div>
+            <div class="info-values-desc">
+              <ul>
+                <li>All children deserve a safe, inclusive school environment and access to public schools which are equitable, 
+                  high-quality, and offer age appropriate, fact-based instruction.</li>
+                <li>Censoring books, ideas, and information is antithetical to the ideals of freedom.</li>
+              </ul>
+            </div>
+          <div class="info-values-title">
+            <h2>Community</h2>
+          </div>
+            <div class="info-values-desc">
+              <ul>
+                <li>We value protecting the vulnerable in our community through outreach, care, and assistance programs.</li>
+                <li>We strongly support efforts to end gun violence.</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="info-agreement">
+          <div class="info-agreement-title">
+            <h2>Olympia Indivisible Values Agreement</h2>
+          </div>
+          <div class="info-agreement-article">
+            <el-collapse>
+              <el-collapse-item title="1. What attitudes do I need to foster during these trying times?" name="1">
+                <ul>
+                  <li>Friendliness</li>
+                  <li>Compassion</li>
+                  <li>Persistence</li>
+                  <li>Patience</li>
+                </ul>
+              </el-collapse-item>
+
+              <el-collapse-item title="2. How should I present myself to the world in print, to the media, and person-to-person?" name="2">
+                <p>Use speech and behavior that is respectful, friendly, fair, effective, and focused</p>
+                <ul>
+                  <li>Use your own words and focus on core values as well as issues</li>
+                  <li>Speak positively about what is right and why, rather than using negative comments</li>
+                  <li>Avoid using Trump’s language; this only strengthens his influence</li>
+                  <li>Steer clear of malicious “put down” humor; funny is fine, but we don’t do snarky</li>
+                </ul>
+              </el-collapse-item>
+
+              <el-collapse-item title="3. How do I stay safe and talk to a Trump follower?" name="3">
+                <p>Be safe, be civil, stay calm, listen deeply, seek common ground</p>
+                <ul>
+                  <li>Be curious, ask questions; try to understand where they are coming from</li>
+                  <li>Seek common ground in shared values</li>
+                  <li>Steer clear of demeaning, judgmental or accusatory language</li>
+                  <li>Steer clear of provocateurs</li>
+                  <li>Act with dignity when confronting aggressive opposition</li>
+                  <li>Leave a situation if it feels unsafe or a situation is escalating</li>
+                  <li>Be mindful and caring of other members’ safety; help them exit if needed</li>
+                  <li>Follow all rules and regulations of the permit when at a rally/march</li>
+                </ul>
+              </el-collapse-item>
+
+              <el-collapse-item title="4. How do I stand up with those most impacted by the Trump agenda?" name="4">
+                <ul>
+                  <li>Be mindful of any tendency to recreate systems of oppression inside our movement and organizing practices; introspect and adjust as needed</li>
+                  <li>Defer to those who are directly affected by a particular issue</li>
+                  <li>Meet with leaders from vulnerable communities, learn about their issues and values, identify mutual causes and opportunities for alliance, act on these when feasible</li>
+                  <li>Respond when possible to invitations to attend gatherings of these individuals and groups and invite them to speak to their issues with our membership</li>
+                </ul>
+              </el-collapse-item>
+
+              <el-collapse-item title="5. How do I stay engaged without losing my mind?" name="5">
+                <ul>
+                  <li>Self-awareness: be attentive to triggers and reactions</li>
+                  <li>Mindfulness: stay in the present with positive actions</li>
+                  <li>Self-care: physically, emotionally and spiritually</li>
+                  <li>Sustainability: take breaks, vacation from activism to recharge your batteries</li>
+                  <li>Fellowship and Humor: engage in events which engender friendship, creativity and fun</li>
+                </ul>
+              </el-collapse-item>
+            </el-collapse>
+          </div>
+        </div>
+      </el-main>
+
+      <el-footer>
+        <div class="info-email">
+          <div class="info-email-title">
+            <h2>GET THE WEEKLY CALL TO ACTION EMAIL</h2>
+            <span>STAY INFORMED</span>
+          </div>
+
+          <p class="info-email-desc">
+            Every Sunday: what's happening this week, what
+            bills are moving, and one thing you can do in
+            15 minutes.
+          </p>
+
+          <el-link
+            class="info-email-link"
+            href="https://olympiaindivisible.substack.com/s/call-to-action"
+            target="_blank"
+          >
+            OLYMPIA INDIVISIBLE SUBSTACK
+            <el-icon>
+              <span class="right-arrow"></span>
+            </el-icon>
+          </el-link>
+        </div>
+
+        <div class="info-link-spam">
+          <el-menu
+            class="info-link-menu"
+            mode="vertical"
+          >
+            <h2>GET INVOLVED</h2>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/join-us.html">
+                Join Us
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/join-us.html#:~:text=NEW%20MEMBER%20ORIENTATION">
+                New Member Orientation
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="">
+                Events Calendar
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="">
+                Action Cafe
+              </el-link>
+            </el-menu-item>
+          </el-menu>
+
+          <el-menu
+            class="info-link-menu"
+            mode="vertical"
+          >
+            <h2>ABOUT</h2>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/mission.html">
+                Mission Statement
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/values.html">
+                Core Values
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="">
+                OI Teams
+              </el-link>
+            </el-menu-item>
+          </el-menu>
+
+          <el-menu
+            class="info-link-menu"
+            mode="vertical"
+          >
+            <h2>RESOURCES</h2>
+
+            <el-menu-item>
+              <el-link href="">
+                OI Toolkit
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="https://indivisible.org/resource/guide/">
+                Indivisible Guide
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/resources.html#reps">
+                Contact Representatives
+              </el-link>
+            </el-menu-item>
+          </el-menu>
+
+          <el-menu
+            class="info-link-menu"
+            mode="vertical"
+          >
+            <h2>OLYMPIA INDIVISIBLE</h2>
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/index.html">
+                Home
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="https://www.paypal.com/donate/?hosted_button_id=9W5X94XD4GSBG">
+                Donate
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/contact.html">
+                Contact Us
+              </el-link>
+            </el-menu-item>
+          </el-menu>
+        </div>
+
+        <div class="social-row">
+          <el-link 
+            href="https://www.facebook.com/OlympiaIndivisible/"
+            target="_blank"
+          >
+            <el-icon>
+              <svg
+                xmlns="https://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </el-icon>            
+          </el-link>
+
+          <el-link
+            href="https://www.instagram.com/olyindivisiblecoms/"
+            target="_blank"
+          >
+            <el-icon>
+              <svg
+                xmlns="https://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+              </svg>
+            </el-icon>
+          </el-link>
+
+          <el-link
+            href="https://www.youtube.com/@olympiaindivisiblevideos/videos"
+            target="_blank"
+          >
+            <el-icon>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M22.54 6.42a2.77 2.77 0 0 0-1.945-1.957C18.88 4 12 4 12 4s-6.88 0-8.595.463A2.77 2.77 0 0 0 1.46 6.42C1 8.148 1 11.75 1 11.75s0 3.602.46 5.33a2.77 2.77 0 0 0 1.945 1.958C5.121 19.5 12 19.5 12 19.5s6.88 0 8.595-.462a2.77 2.77 0 0 0 1.945-1.958c.46-1.726.46-5.33.46-5.33s0-3.602-.46-5.33ZM9.75 15.021V8.48l5.75 3.271z" />
+              </svg>
+            </el-icon>
+          </el-link>
+        </div>
+
+        <div class="copyright">
+          <p>Congressional Districts 6 & 10</p>
+          <p>Thurston County, WA</p>
+          <p>&copy; Olympia Indivisible</p>
+        </div>
+      </el-footer>
+    </el-container>
+  </div>
+
+
+  <!-- Vue App -->
+  <script>
+    const { createApp, ref } = Vue
+
+    createApp({
+      setup() {
+
+        function openNav() {
+          const topNav = document.querySelector(".top-nav")
+          const main = document.querySelector(".el-main")
+          const nav = document.querySelector("#mobile-flyout")
+
+          topNav.style.filter = "blur(5px)"
+          main.style.filter = "blur(5px)"
+
+          nav.style.display = "block"
+          nav.style.animation = "slideLeft linear forwards"
+        }
+
+        function closeNav() {
+          const topNav = document.querySelector(".top-nav")
+          const main = document.querySelector(".el-main")
+          const nav = document.querySelector("#mobile-flyout")
+
+          topNav.style.removeProperty("filter")
+          main.style.removeProperty("filter")
+
+          nav.style.animation = "slideRight linear forwards"
+          nav.style.display = "none"
+
+          // Waits until animation ends
+          // setTimeout(() => {
+          //   nav.style.display = "none"
+          // }, 1000)
+        }
+
+        return { openNav, closeNav }
+      }
+    })
+    .use(ElementPlus)
+    .use(ElementPlusIconsVue)
+    .mount("#app")
+  </script>
+</body>
+</html>
