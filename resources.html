@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - Olympia Indivisible</title>
+
+  <!-- Google Font Setup -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Vue -->
+  <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js"></script>
+
+  <!-- Element Plus -->
+  <script src="https://unpkg.com/element-plus@2.5.6/dist/index.full.js"></script>
+
+  <!-- Element Plus Icons -->
+  <script src="https://unpkg.com/@element-plus/icons-vue@2.3.2/dist/index.iife.js"></script>
+
+  <!-- Element Plus CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.5.6/dist/index.css">
+
+  <!-- Barlow Condensed -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&display=swap">
+
+  <!-- Public Sans -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap">
+
+  <style>
+    /* Color Variables */
+    :root {
+      --dark-blue: #1A2A42;
+      --capitol-deep: #194776;
+      --capitol-blue: #1A5C8A;
+      --light-blue: #B6C6DF;
+      --golden: #F4BC4F;
+      --paper: #FFFAF1;
+      --ink: #10161E;
+    }
+
+    /* Font Styles */
+
+    .barlow-condensed-bold {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .barlow-condensed-medium {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .public-sans-bold {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .public-sans-regular {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* CSS Icons */
+
+    .right-arrow {
+      margin: 0.25em;
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='black' d='M754.752 480H160a32 32 0 1 0 0 64h594.752L521.344 777.344a32 32 0 0 0 45.312 45.312l288-288a32 32 0 0 0 0-45.312l-288-288a32 32 0 1 0-45.312 45.312z'/%3E%3C/svg%3E");
+      background-color: currentColor;
+      -webkit-mask-image: var(--svg);
+      mask-image: var(--svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+    }
+
+    .down-arrow {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='black' d='M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8 316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496'/%3E%3C/svg%3E");
+      background-color: currentColor;
+      -webkit-mask-image: var(--svg);
+      mask-image: var(--svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+    }
+    
+    .up-arrow {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='black' d='M104.704 685.248a64 64 0 0 0 90.496 0l316.8-316.8 316.8 316.8a64 64 0 0 0 90.496-90.496L557.248 232.704a64 64 0 0 0-90.496 0L104.704 594.752a64 64 0 0 0 0 90.496'/%3E%3C/svg%3E");
+      background-color: currentColor;
+      -webkit-mask-image: var(--svg);
+      mask-image: var(--svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+    }
+
+    /* For all p's */
+    p {
+      line-height: 1.5;
+    }
+
+    /* For all a's */
+    a {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    div#app {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Main Styling */
+
+    .el-main {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Resources Description */
+
+    #resources {
+      padding: 1em;
+      background-color: var(--paper);
+      color: var(--dark-blue);
+    }
+
+    #resources-title {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    /* Guides */
+
+    #guides {
+      padding: 2em 1em;
+      background-color: var(--light-blue);
+      color: var(--dark-blue);
+    }
+
+    #guides-title {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .guides-article {
+      background-color: var(--paper);
+      border: 1px solid var(--dark-blue);
+      border-radius: 1em;
+      margin: 1em 0;
+      padding: 2em;
+      color: var(--dark-blue);
+    }
+
+    .guides-article h3 {
+      margin: 0;
+    }
+
+    .guides-article a {
+      color: var(--dark-blue);
+    }
+
+    /* Representatives */
+
+    #reps {
+      padding: 2em 1em;
+      background-color: var(--paper);
+      color: var(--dark-blue);
+    }
+
+    #reps-title {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    /* Reps Email and Numbers */
+
+    #reps-quick-links {
+      padding: 1em;
+      background-color: var(--light-blue);
+      border-radius: 1em;
+    }
+
+    #reps-quick-links a {
+      margin: 1em 0;
+      width: 17em;
+      justify-content: space-between;
+      color: var(--dark-blue);
+    }
+
+    /* Member Lists */
+
+    .drop-btn {
+      cursor: pointer;
+      margin: 1em 0;
+      padding: 1em;
+      width: 100%;
+      border: 1px solid var(--dark-blue);
+      border-radius: 0.5em;
+      background-color: var(--paper);
+      color: var(--dark-blue);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.17em;
+    }
+
+    .member-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+      display: none;
+      flex-direction: column;
+      gap: 1em 0;
+    }
+
+    .member-list--clicked {
+      display: flex;
+    }
+
+    .member {
+      background-color: var(--paper);
+      border: 1px solid var(--dark-blue);
+      border-radius: 1em;
+      padding: 1em;
+      width: calc(100% - 2em);
+    }
+
+    @media (width > 800px) {
+      .member-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+      }
+
+      .member {
+        width: 25em;
+      }
+    }
+
+    .member h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .member img {
+      display: block;
+      margin: auto;
+      width: 11.25em;
+      height: 14em;
+    }
+
+    .member-homepage {
+      margin: 1em auto;
+    }
+
+    .member h4 {
+      margin: 0;
+      margin-top: 1em;
+      font-size: 1.25em;
+    }
+
+    .member p {
+      margin: 0.25em 0;
+    }
+
+    .member a {
+      text-decoration: underline;
+    }
+
+    .washington-dc,
+    .tacoma-office,
+    .lakewood-office {
+      margin: 1em 0;
+    }
+
+    .etc {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <el-container>
+      <el-main>
+        <div id="resources">
+          <div id="resources-title">
+            <h1 class="barlow-condensed-bold">TOOLS AND GUIDES</h1>
+
+            <span class="barlow-condensed-medium">RESOURCES</span>
+          </div>
+
+          <p
+            id="resources-desc"
+            class="public-sans-regular"
+          >
+            Everything you need to take informed, effective action.
+            Toolkits, guides, and a full directory of your elected
+            representatives at every level.
+          </p>
+        </div>
+
+        <div id="guides">
+          <div id="guides-title">
+            <h2 class="barlow-condensed-bold">TOOLKITS</h2>
+
+            <span class="barlow-condensed-medium">GUIDES</span>
+          </div>
+
+          <div
+            class="guides-article"
+          >
+            <h3 class="barlow-condensed-bold">
+              OI TOOLKIT FOR RESILIENCY, SOLIDARITY,
+              AND MEANINGFUL ACTION
+            </h3>
+
+            <p class="public-sans-regular">
+              Scripts, templates, and guides, for local
+              advocacy and community resilence.
+            </p>
+
+            <a
+              class="barlow-condensed-bold"
+              href="#guides"
+            >
+              OPEN TOOLKIT
+              <span
+                class="right-arrow"
+                aria-hidden="true"
+              >
+              </span>
+            </a>
+          </div>
+
+          <div
+            class="guides-article"
+          >
+            <h3 
+              class="barlow-condensed-bold"
+            >
+              INDIVISIBLE GUIDE
+            </h3>
+
+            <p class="public-sans-regular">
+              The national Indivisible movement's foundational
+              guide to grassroots advocacy.
+            </p>
+
+            <a
+              class="barlow-condensed-bold"
+              href="#guides"
+            >
+              OPEN GUIDE
+              <span
+                class="right-arrow"
+                aria-hidden="true"
+              >
+              </span>
+            </a>
+          </div>
+
+          <div
+            class="guides-article"
+          >
+            <h3
+              class="barlow-condensed-bold"
+            >
+              RALLIES, MARCHES AND TRAININGS GUIDE
+            </h3>
+
+            <p class="public-sans-regular">
+              Timely updates on marches, rallies, trainings,
+              and boycotts. Stay current and show up.
+            </p>
+
+            <a
+              class="barlow-condensed-bold"
+              href="#guides"
+            >
+              OPEN GUIDE
+              <span
+                class="right-arrow"
+                aria-hidden="true"
+              >
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div id="reps">
+          <div id="reps-title">
+            <h2
+              class="barlow-condensed-bold"
+            >
+              ELECTED OFFICIALS REPRESENTING THRUSTON COUNTY
+            </h2>
+
+            <span
+              class="barlow-condensed-medium"
+            >
+              CONTACT YOUR REPRESENTATIVES
+            </span>
+          </div>
+
+          <p
+            id="reps-desc"
+            class="public-sans-regular"
+          >
+            Serving Congressional Districts 6 and 10 - 
+            Thurston County, WA
+          </p>
+
+          <div id="reps-quick-links">
+            <h3 class="barlow-condensed-medium">
+              LEGISLATORS QUICK LINKS
+            </h3>
+
+            <a
+              class="public-sans-regular"
+              href="https://app.leg.wa.gov/memberemail/"
+              target="_blank"
+            >
+              All Legislators Email Addresses
+              <span
+                class="right-arrow"
+                aria-hidden="true"
+              >
+              </span>
+            </a>
+
+            <a
+              class="public-sans-regular" 
+              href="https://app.leg.wa.gov/Rosters/Members"
+              target="_blank"
+            >
+              All Legislators Phone Numbers
+              <span
+                class="right-arrow"
+                aria-hidden="true"
+              >
+              </span>
+            </a>
+          </div>
+
+          <div id="reps-congress-members">
+            <button
+              class="drop-btn barlow-condensed-bold"
+              @click="onDropBtnClick"
+            >
+              FEDERAL - MEMBERS OF CONGRESS
+              <span
+                class="down-arrow"
+                aria-hidden="true"
+              >
+              </span>
+            </button>
+
+            <ul class="member-list">
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Senator Patty Murray
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/patty-murray-2021_1.jpg"
+                    alt="Female Blonde Caucasian with Glasses"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://www.murray.senate.gov/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="washington-dc">
+                      <h4 class="barlow-condensed-medium">Washington DC</h4>
+
+                      <p class="public-sans-regular">
+                        154 Russell Senate Office Building<br>
+                        Washington DC 20510
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+2022242621">
+                          (202) 224-2621
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="tacoma-office">
+                      <h4 class="barlow-condensed-medium">Tacoma Office</h4>
+
+                      <p class="public-sans-regular">
+                        1301 A Street, Suite 213<br>
+                        Tacoma, WA 98402
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+2535723636">
+                          (253) 572-3636
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Fax:
+                        <a href="tel:+2535729488">
+                          (253) 572-9488
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <p>
+                        If voicemail boxes are full at the
+                        above numbers,
+                        you can call any WA regional office.
+                      </p>
+
+                      <div class="etc-links">
+                        <a
+                          href="https://www.murray.senate.gov/office-locations/"
+                          target="_blank"
+                        >
+                          Office Locations
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://x.com/PattyMurray"
+                          target="_blank"
+                        >
+                          Twitter
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.facebook.com/pattymurray/"
+                          target="_blank"
+                        >
+                          Facebook
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.congress.gov/member/patty-murray/M001111"
+                          target="_blank"
+                        >
+                          Congressional Activity
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Senator Maria Cantwell
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/maria-cantwell-2021_1.jpg"
+                    alt="Female Black-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://www.cantwell.senate.gov/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="washington-dc">
+                      <h4 class="barlow-condensed-medium">Washington DC</h4>
+
+                      <p class="public-sans-regular">
+                        511 Hart Senate Office Building<br>
+                        Washington DC 20510
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+2022243441">
+                          (202) 224-3441
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="tacoma-office">
+                      <h4 class="barlow-condensed-medium">Tacoma Office</h4>
+
+                      <p class="public-sans-regular">
+                        950 Pacific Avenue, Suite 615<br>
+                        Tacoma, WA 98402
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+2535722281">
+                          (253) 572-2281
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Fax:
+                        <a href="tel:+2535725879">
+                          (253) 572-5879
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <p>
+                        If voicemail boxes are full at the
+                        above numbers,
+                        you can call any WA regional office.
+                      </p>
+
+                      <div class="etc-links">
+                        <a
+                          href="https://www.cantwell.senate.gov/contact/locations"
+                          target="_blank"
+                        >
+                          Office Locations
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://x.com/SenatorCantwell"
+                          target="_blank"
+                        >
+                          Twitter
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.facebook.com/senatorcantwell/"
+                          target="_blank"
+                        >
+                          Facebook
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.congress.gov/member/maria-cantwell/C000127"
+                          target="_blank"
+                        >
+                          Congressional Activity
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Representative Marilyn Strickland
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/marilyn-strickland-2021_2.jpg"
+                    alt="Female Black-Haired African American with Glasses"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://strickland.house.gov/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="washington-dc">
+                      <h4 class="barlow-condensed-medium">Washington DC</h4>
+
+                      <p class="public-sans-regular">
+                        1724 Longworth House Office Building<br>
+                        Washington, DC 20515
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+2022259740">
+                          (202) 225-9740
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="lakewood-office">
+                      <h4 class="barlow-condensed-medium">Lakewood Office</h4>
+
+                      <p class="public-sans-regular">
+                        6000 Main Street SW, Suite 3B<br>
+                        Lakewood, WA 98499
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+3604598514">
+                          (360) 459-8514 
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <div class="etc-links">
+                        <a
+                          href="https://x.com/RepStricklandWA"
+                          target="_blank"
+                        >
+                          Twitter
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.facebook.com/RepStricklandWA"
+                          target="_blank"
+                        >
+                          Facebook
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://clerk.house.gov/members/S001159"
+                          target="_blank"
+                        >
+                          Congressional Activity
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Representative Emily Randall
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/emily-randall-6th.jpg"
+                    alt="Female Black-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://randall.house.gov/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="washington-dc">
+                      <h4 class="barlow-condensed-medium">Washington DC</h4>
+
+                      <p class="public-sans-regular">
+                        1531 Longworth House Office Building<br>
+                        Washington, DC 20515
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+2022255916">
+                          (202) 225-5916
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="tacoma-office">
+                      <h4 class="barlow-condensed-medium">Tacoma Office</h4>
+
+                      <p class="public-sans-regular">
+                        1102 A Street Suite 326<br>
+                        Tacoma, WA 98402
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+2532723515">
+                          (253) 272-3515
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <div class="etc-links">
+                        <a
+                          href="https://bsky.app/profile/emilyrandallwa.bsky.social"
+                          target="_blank"
+                        >
+                          Bluesky
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.facebook.com/EmilyRandallWA"
+                          target="_blank"
+                        >
+                          Facebook
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://clerk.house.gov/members/R000621"
+                          target="_blank"
+                        >
+                          Congressional Activity
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="reps-state-execs">
+            <button
+              class="drop-btn barlow-condensed-bold"
+              @click="onDropBtnClick"
+            >
+              STATE EXECUTIVES
+              <span
+                class="down-arrow"
+                aria-hidden="true"
+              >
+              </span>
+            </button>
+
+            <ul class="member-list">
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Governor Bob Ferguson
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/cropbob.jpg"
+                    alt="Male Brown-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://governor.wa.gov/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <h4 class="barlow-condensed-medium">Mailing Address</h4>
+
+                      <p class="public-sans-regular">
+                        Office of the Governor 
+                        PO Box 40002<br>
+                        Olympia, WA 98504-0002
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+3609024111">
+                          (360) 902-4111
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <div class="etc-links">
+                        <a
+                          href="https://x.com/WaStateGov"
+                          target="_blank"
+                        >
+                          Twitter
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.facebook.com/WaStateGov"
+                          target="_blank"
+                        >
+                          Facebook
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://bsky.app/profile/governorferguson.bsky.social"
+                          target="_blank"
+                        >
+                          Bluesky
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Lieutenant Governor Denny Heck
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/ltgov-denny-heck.jpeg"
+                    alt="Male Brown-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://ltgov.wa.gov/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <h4 class="barlow-condensed-medium">Mailing Address</h4>
+
+                      <p class="public-sans-regular">
+                        Office of the Lt. Governor 
+                        PO Box 40400<br>
+                        Olympia, WA 98504-0400
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+3607867700">
+                          (360) 786-7700
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <div class="etc-links">
+                        <a
+                          href="https://x.com/LtGovDennyHeck"
+                          target="_blank"
+                        >
+                          Twitter
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.facebook.com/LtGovDennyHeck"
+                          target="_blank"
+                        >
+                          Facebook
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.instagram.com/ltgovwa/"
+                          target="_blank"
+                        >
+                          Instagram
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Attorney General Nick Brown
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/nickbrown2.jpg"
+                    alt="Male Bald African American"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://www.atg.wa.gov/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <h4 class="barlow-condensed-medium">Mailing Address</h4>
+
+                      <p class="public-sans-regular">
+                        Office of the Attorney General
+                        PO Box 40100<br>
+                        Olympia, WA 98504-0100
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+3609024111">
+                          (360) 902-4111
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <div class="etc-links">
+                        <a
+                          href="https://x.com/agowa"
+                          target="_blank"
+                        >
+                          Twitter
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://www.facebook.com/WAStateAttorneyGeneral"
+                          target="_blank"
+                        >
+                          Facebook
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://bsky.app/profile/atg.wa.gov"
+                          target="_blank"
+                        >
+                          Bluesky
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="reps-leg-22">
+            <button
+              class="drop-btn barlow-condensed-bold"
+              @click="onDropBtnClick"
+            >
+              LEGISLATIVE DISTRICT 22
+              <span
+                class="down-arrow"
+                aria-hidden="true"
+              >
+              </span>
+            </button>
+
+            <ul class="member-list">
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Senator Jessica Bateman
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/bateman.jpg"
+                    alt="Female Black-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://senatedemocrats.wa.gov/bateman/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <h4 class="barlow-condensed-medium">Mailing Address</h4>
+
+                      <p class="public-sans-regular">
+                        409 Legislative Building
+                        PO Box 40422
+                        Olympia, WA 98504
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+3607867642">
+                          (360) 786-7642
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <div class="etc-links">
+                        <a
+                          href="https://app.leg.wa.gov/pbc/memberEmail/22/0"
+                          target="_blank"
+                        >
+                          Email
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://leg.wa.gov/legislators/member/jessica-bateman"
+                          target="_blank"
+                        >
+                          Legislative Information
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Representative Beth Doglio
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/doglio.jpg"
+                    alt="Female Gray-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://housedemocrats.wa.gov/Doglio/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <h4 class="barlow-condensed-medium">Mailing Address</h4>
+
+                      <p class="public-sans-regular">
+                        308 John L. O'Brien Building
+                        PO Box 40600
+                        Olympia, WA 98504
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+3607867940">
+                          (360) 786-7940
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <div class="etc-links">
+                        <a
+                          href="https://app.leg.wa.gov/pbc/memberEmail/22/1"
+                          target="_blank"
+                        >
+                          Email
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://leg.wa.gov/legislators/member/26175"
+                          target="_blank"
+                        >
+                          Legislative Information
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Representative Lisa Parshley
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/lisaparshley.jpg"
+                    alt="Female Black-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://housedemocrats.wa.gov/Parshley/"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <h4 class="barlow-condensed-medium">Mailing Address</h4>
+
+                      <p class="public-sans-regular">
+                        317 John L. O'Brien Building
+                        PO Box 40600
+                        Olympia, WA 98504
+                      </p>
+
+                      <p class="public-sans-regular">
+                        Phone:
+                        <a href="tel:+3607867992">
+                          (360) 786-7992
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>                      
+                    </div>
+
+                    <div class="etc public-sans-regular">
+                      <div class="etc-links">
+                        <a
+                          href="https://app.leg.wa.gov/pbc/memberEmail/22/2"
+                          target="_blank"
+                        >
+                          Email
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+
+                        <a
+                          href="https://leg.wa.gov/legislators/member/35415"
+                          target="_blank"
+                        >
+                          Legislative Information
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="reps-board-commissioners">
+            <button
+              class="drop-btn barlow-condensed-bold"
+              @click="onDropBtnClick"
+            >
+              THURSTON COUNTY COMMISSIONERS
+              <span
+                class="down-arrow"
+                aria-hidden="true"
+              >
+              </span>
+            </button>
+
+            <ul class="member-list">
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Commissioner Carolina Mejia
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/carolina.jpg"
+                    alt="Female Black-Haired African American"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://www.thurstoncountywa.gov/departments/board-county-commissioners/commissioner-district-1"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <p class="public-sans-regular">
+                        Email:
+                        <a href="mailto:carolina.mejia@co.thurston.wa.us">
+                          carolina.mejia@co.thurston.wa.us
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                      
+                      <p class="public-sans-regular">
+                        Phone to Executive Aide:
+                        <a href="tel:+3603572470">
+                          (360) 357-2470
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Commissioner Rachel Grant
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/rachel-grant-3x4.jpg"
+                    alt="Female Brown-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://www.thurstoncountywa.gov/departments/board-county-commissioners/commissioner-district-2"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <p class="public-sans-regular">
+                        Email:
+                        <a href="mailto:rachel.grant@co.thurston.wa.us">
+                          rachel.grant@co.thurston.wa.us
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                      
+                      <p class="public-sans-regular">
+                        Phone to Executive Aide:
+                        <a href="tel:+3607865747">
+                          (360) 786-5747
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Commissioner Tye Menser
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/tye-menser-3x4.jpg"
+                    alt="Male Gray-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://www.thurstoncountywa.gov/departments/board-county-commissioners/commissioner-district-3"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <p class="public-sans-regular">
+                        Email:
+                        <a href="mailto:tye.menser@co.thurston.wa.us">
+                          tye.menser@co.thurston.wa.us
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                      
+                      <p class="public-sans-regular">
+                        Phone to Executive Aide:
+                        <a href="tel:+3607865414">
+                          (360) 786-5414
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Commissioner Wayne Fournier
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/fournier-resized.jpg"
+                    alt="Male Bald Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://www.thurstoncountywa.gov/departments/board-county-commissioners/commissioner-wayne-fournier-district-4"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <p class="public-sans-regular">
+                        Email:
+                        <a href="mailto:wayne.fournier@co.thurston.wa.us">
+                          wayne.fournier@co.thurston.wa.us
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                      
+                      <p class="public-sans-regular">
+                        Phone to Executive Aide:
+                        <a href="tel:+3602865394">
+                          (360) 286-5394
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="member">
+                  <h3
+                    class="barlow-condensed-bold"
+                  >
+                    Commissioner Emily Clouse
+                  </h3>
+
+                  <img
+                    class="member-photo"
+                    src="https://www.olympiaindivisible.org/uploads/2/0/5/9/20595614/published/emilyclousetc.jpg"
+                    alt="Female Black-Haired Caucasian"
+                  >
+
+                  <div class="member-info">
+                    <a
+                      class="member-homepage public-sans-regular"
+                      href="https://www.thurstoncountywa.gov/departments/board-county-commissioners/commissioner-emily-clouse-district-5"
+                      target="_blank"
+                    >
+                      Member Home Page
+                      <span
+                        class="right-arrow"
+                        aria-hidden="true"
+                      >
+                      </span>
+                    </a>
+
+                    <div class="mailing-address">
+                      <p class="public-sans-regular">
+                        Email:
+                        <a href="mailto:emily.clouse@co.thurston.wa.us">
+                          emily.clouse@co.thurston.wa.us
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                      
+                      <p class="public-sans-regular">
+                        Phone to Executive Aide:
+                        <a href="tel:+3607865658">
+                          (360) 786-5658
+                          <span
+                            class="right-arrow"
+                            aria-hidden="true"
+                          >
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </el-main>
+    </el-container>
+  </div>
+
+  <script>
+    const { createApp, ref } = Vue
+
+    createApp({
+      setup() {
+        
+        function onDropBtnClick(e) {
+          const element = e.target
+
+          let container
+          let dropBtnIcon
+          let dropdown
+          switch (element.nodeName) {
+            case "SPAN":
+              container = element.parentNode.parentNode
+
+              dropBtnIcon = container.childNodes[0].childNodes[1]
+              dropBtnIcon.classList.toggle("down-arrow")
+              dropBtnIcon.classList.toggle("up-arrow")
+
+              dropdown = container.childNodes[1]
+              dropdown.classList.toggle("member-list--clicked")
+
+              break;
+
+            case "BUTTON":
+              container = element.parentNode
+
+              dropBtnIcon = container.childNodes[0].childNodes[1]
+              dropBtnIcon.classList.toggle("down-arrow")
+              dropBtnIcon.classList.toggle("up-arrow")
+
+              dropdown = container.childNodes[1]
+              dropdown.classList.toggle("member-list--clicked")
+
+              break;
+
+            default:
+              console.error("onDropBtnClick() Error")
+          }
+        }
+
+        return { onDropBtnClick }
+      }
+    })
+    .use(ElementPlus)
+    .use(ElementPlusIconsVue)
+    .mount("#app")
+  </script>
+</body>
+</html>

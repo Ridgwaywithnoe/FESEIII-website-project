@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission Statement - Olympia Indivisible</title>
+
+  <!-- Google Font Setup -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Vue -->
+  <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js"></script>
+
+  <!-- Element Plus -->
+  <script src="https://unpkg.com/element-plus@2.5.6/dist/index.full.js"></script>
+
+  <!-- Element Plus Icons -->
+  <script src="https://unpkg.com/@element-plus/icons-vue@2.3.2/dist/index.iife.js"></script>
+
+  <!-- Element Plus CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.5.6/dist/index.css">
+
+  <!-- Barlow Condensed -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&display=swap">
+
+  <!-- Public Sans -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap">
+  
+  <style>
+
+    /* Font Styles */
+    /* .barlow-condensed-medium {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .barlow-condensed-bold {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .public-sans-regular {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .public-sans-bold {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+    } */
+    
+    /* Header Styling */
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .el-container {
+      z-index: 0;
+    }
+
+    .el-header {
+      margin: 0;
+      padding: 0;
+      background-color: #FFFAF1;
+      border-bottom: 1px solid #10161E;
+    }
+
+    /* Skip links */
+    .skip-link {
+      position: absolute;
+      margin: 1em;
+      padding: 1em;
+      z-index: 99;
+      background-color: white;
+      color: black;
+      border-radius: 1em;
+      border: 1px solid black; 
+    }
+    
+    .skip-link:not(:focus):not(:active) {
+      clip-path: inset(50%);
+    }
+
+    .logo {
+      margin: 1em;
+      font-size: 1em;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      color: #10161E;
+    }
+
+    .logo-highlight {
+      margin-left: 0.25em;
+      padding: 0.25em;
+      background-color: #1A5C8A;
+      color: #FFFAF1;
+    }
+
+    .logo:hover {
+      border-bottom: none;
+      color: #10161E;
+    }
+
+    .logo.is-underline:hover:after {
+      border-bottom: none;
+    }
+
+    .el-menu-item > .el-link,
+    .el-sub-menu__title {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: #10161E;
+    }
+
+    .el-menu {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    .el-menu--horizontal.el-menu {
+      background-color: #FFFAF1;
+      border-bottom: 1px solid #10161E;
+    }
+
+    /* Makes submenu bg paper color */
+    .el-menu--horizontal .el-menu .el-menu-item,
+    .el-menu--horizontal .el-menu .el-sub-menu__title {
+      background-color: #FFFAF1;
+    }
+
+    @keyframes slideLeft {
+      from { right: -50% }
+      to { right: 0%; }
+    }
+
+    @keyframes slideRight {
+      from { right: 0%; }
+      to { right: -50%; }
+    }
+
+    /* Mobile Flyout */
+    #mobile-flyout {
+      display: none;
+      position: absolute;
+      top: 0%;
+      right: -50%;
+      width: 70%;
+      overflow-x: hidden;
+      border-top-left-radius: 1em;
+      border-bottom-left-radius: 1em;
+      border: 1px solid #10161E;
+      height: 100%;
+    }
+
+    #main-nav-open,
+    #main-nav-close {
+      border: 1px solid #10161E;
+      background-color: #FFFAF1;
+      color: #10161E;
+    }
+
+    #main-nav-open {
+      margin: 1em;
+    }
+
+    #main-nav-close {
+      margin-left: 1em;
+      margin-top: 1em;
+    }
+
+    #mobile-flyout {
+      background-color: #FFFAF1;
+      color: #10161E;
+      z-index: 99;
+    }
+
+    /* Makes submenu bg paper color */
+    .el-menu--vertical .el-menu .el-menu-item,
+    .el-menu--vertical .el-menu .el-sub-menu__title {
+      background-color: #FFFAF1;
+    }
+
+    /* Main Styling */
+    .el-main {
+      margin: 0;
+      padding: 0;
+      background-color: #FFFAF1;
+      color: #10161E;
+      z-index: 0;
+    }
+
+    /* Hero */
+    /* Centers elements and organizes through columns */
+    .hero {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 3em;
+      color: #1A2A42;
+    }
+
+
+    .hero-desc {
+      margin: 0 1em;
+      font-family: "Public Sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    /* For all paragraphs */
+    p {
+      line-height: 1.5;
+    }
+
+    /* For all icons currently */
+    .el-icon {
+      margin: 0 0.25em;
+    }
+
+    .right-arrow {
+      display: inline-block;
+      width: inherit;
+      height: inherit;
+      --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='black' d='M754.752 480H160a32 32 0 1 0 0 64h594.752L521.344 777.344a32 32 0 0 0 45.312 45.312l288-288a32 32 0 0 0 0-45.312l-288-288a32 32 0 1 0-45.312 45.312z'/%3E%3C/svg%3E");
+      background-color: currentColor;
+      -webkit-mask-image: var(--svg);
+      mask-image: var(--svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+    }
+
+    /* Hero Links */
+    .hero-btn1 {
+      background-color: #F4BC4F;
+    }
+    .hero-btn1 .el-link {
+      color: #10161E;
+    }
+
+    .hero-btn2 {
+      background-color: #1A5C8A;
+    }
+    .hero-btn2 .el-link {
+      color: #FFFAF1;
+    }
+
+    .hero-btn3 {
+      background-color: #1A2A42;
+    }
+    .hero-btn3 .el-link {
+      color: #FFFAF1;
+    }
+
+    /* Info mission */
+    .info-mission {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2em 1em;
+      background-color: #F4BC4F;
+      color: #1A2A42;
+    }
+
+    .info-mission-head {
+      display: flex;
+      flex-direction: column-reverse;
+      font-size: 2em;
+      border-bottom: 4px solid #1A5C8A;
+    }
+
+    .info-mission-head h2 {
+      margin: 0;
+    }
+
+    .info-mission-statement {
+      font-family: "Public Sans", sans-serif;
+      font-size: 2em;
+      line-height: 1.4;
+      color: #1A2A42;
+    }
+
+    .info-mission-statement p {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .info-mission-title {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .info-mission-title h2 {
+      margin: 0.25em 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 2em;
+      font-weight: 700;
+      font-style: normal;
+      text-align: center;
+    }
+
+    .info-mission-title span {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .info-mission-desc p {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto; 
+      margin: 0;
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-size: 1em;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.6;
+    }
+
+    .info-mission-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+      background-color: #B6C6DF;
+      color: #1A2A42;
+    }
+
+    .info-mission-column-block {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .info-mission-column-block h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      text-transform: uppercase;
+      margin-bottom: 1em;
+      color: #1A2A42;
+      border-bottom: 4px solid #1A5C8A; 
+      display: inline-block;
+      padding-bottom: 0.1em;
+    }
+
+    .info-mission-button {
+      width: fit-content;
+      border: none;
+      background-color: #1A2A42;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      box-shadow: 0 2px 0 #BBB;
+    }
+
+    .info-mission-button .el-link {
+      color: #FFFAF1;
+      font-size: 1.25em;
+    }
+
+    /* Info Action */
+    .info-action {
+      display: flex;
+      flex-direction: column;
+      margin: 2em 1em;
+      background-color: #FFFAF1;
+      color: #1A2A42;
+    }
+
+    .info-action-title {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .info-action-title h2 {
+      margin: 0.25em 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .info-action-title span {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .info-action-article {
+      border: 1px solid #1A2A42;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 1em;
+      /* height: 12em; */
+    }
+
+    .info-action-article h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      margin: 1em 0;
+    }
+
+    .info-action-article p {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      margin: 0;
+      margin-bottom: 1em;
+    }
+
+    .info-action-article .el-button {
+      border: none;
+      margin: 0;
+      padding: 0;
+      background-color: #FFFAF1;
+      color: #1A2A42;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .info-action-article .el-button .el-link {
+      color: #1A2A42;
+      font-size: 1.25em;
+    }
+
+    /* Footer Styling */
+    .el-footer {
+      margin: 0;
+      padding: 0;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      background-color: #1A2A42;
+      color: #FFFAF1;
+    }
+
+    /* Weekly Email */
+    .info-email {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3em 1em;
+    }
+
+    .info-email-title {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .info-email-title h2 {
+      margin: 0.5em 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      text-align: center;
+      color: #F4BC4F;
+    }
+
+    .info-email-title span {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      color: #B6C6DF;
+    }
+
+    .info-email-desc {
+      margin: 0;
+      text-align: center;
+    }
+
+    .info-email-link {
+      margin: 1em;
+      margin-bottom: 0;
+      padding: 1em;
+      width: fit-content;
+      border-radius: 0.5em;
+      background-color: #FFFAF1;
+      color: #1A2A42;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* List of Nav Links */
+    .info-link-spam {
+      display: flex;
+      flex-flow: row wrap;
+      margin: 1em;
+      background-color: #1A2A42;
+      gap: 0 1em;
+    }
+
+    .info-link-menu {
+      background-color: #1A2A42;
+      border: none;
+      width: fit-content;
+    }
+
+    .info-link-menu:not(.el-menu--collapse):not(.el-menu--popup-container) .el-menu-item {
+      padding: 0;
+    }
+
+    .info-link-menu h2 {
+      color: #F4BC4F;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      margin-bottom: 0;
+      font-size: 1.25em;
+    }
+
+    .info-link-menu .el-menu-item {
+      margin: 0;
+      padding: 0;
+      height: 2em;
+    }
+
+    .info-link-menu .el-menu-item .el-link {
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: #FFFAF1;
+    }
+
+    /* Social Icon Links */
+    .social-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .social-row .el-icon {
+      margin: 0.5em;
+      padding: 0;
+      color: #F4BC4F;
+      font-size: 1.5em;
+    }
+
+    /* Address & Copyright */
+    .copyright {
+      margin: 0;
+      margin-bottom: 1em;
+      padding: 0;
+    }
+
+    .copyright p {
+      margin: 0.5em;
+      text-align: center;
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 0.75em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <el-container>
+      <el-header>
+      <!-- Skip Links -->
+      <el-link
+        class="skip-link"
+        href="#main"
+      >
+        Skip to main
+      </el-link>
+
+      <el-link
+        class="skip-link"
+        href="#footer"
+      >
+        Skip to footer
+      </el-link>
+
+      <script>
+        console.log(window.location.pathname)
+      </script>
+
+      <!-- Desktop Top Nav -->
+      <div
+        v-if="false"
+        class="top-nav"
+        style="display: flex;"
+      >
+        <el-link class="logo" href="index.html" aria-label="Olympia Indivisible Home">
+          OLYMPIA
+          <span class="logo-highlight">
+            INDIVISIBLE
+          </span>
+        </el-link>
+
+        <!-- Desktop Nav -->
+        <el-menu
+          mode="horizontal"
+          style="justify-content: flex-end;"
+        >
+          <!-- Home -->
+          <el-menu-item index="1">
+            <el-link href="http://olyind.csevg.com/index.html">HOME</el-link>
+          </el-menu-item>
+
+          <!-- Take Action -->
+          <el-sub-menu index="2">
+            <template #title>TAKE ACTION</template>
+
+            <el-menu-item index="2-1">
+              <el-link href="https://voter.votewa.gov/portal2023/login.aspx">REGISTER TO VOTE</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="2-2">
+              <el-link href="http://olyind.csevg.com/take-action.html">TAKE ACTION NETWORK</el-link>
+            </el-menu-item>
+          </el-sub-menu>
+
+          <!-- Join Us -->
+          <el-sub-menu index="3">
+            <template #title>JOIN US</template>
+
+            <el-menu-item index="3-1">
+              <el-link href="http://olyind.csevg.com/join-us.html#:~:text=STEP%201-,MEMBER%20SIGN%20UP,-Interested%20in%20joining">MEMBER SIGN UP</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="3-2">
+              <el-link href="http://olyind.csevg.com/join-us.html#:~:text=NEW%20MEMBER%20ORIENTATION">NEW MEMBER ORIENTATION</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="3-3">
+              <el-link href="">OI EVENTS CALENDAR</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="3-4">
+              <el-link href="">OI PROGRAMS</el-link>
+            </el-menu-item>
+          </el-sub-menu>
+
+          <!-- Resources -->
+          <el-sub-menu index="4">
+            <template #title>RESOURCES</template>
+
+            <el-menu-item index="4-1">
+              <el-link href="http://olyind.csevg.com/resources.html#guides">GUIDES</el-link>
+            </el-menu-item>
+
+            <el-menu-item index="4-2">
+              <el-link href="http://olyind.csevg.com/resources.html#reps">CONTACT REPRESENTATIVES</el-link>
+            </el-menu-item>
+          </el-sub-menu>
+
+          <!-- Donate -->
+          <el-menu-item index="5">
+            <el-link href="https://www.paypal.com/donate/?hosted_button_id=9W5X94XD4GSBG">DONATE</el-link>
+          </el-menu-item>
+        </el-menu>
+
+        <script>
+          console.log(document.querySelector(`[index="1"]`))
+        </script>
+      </div>
+
+      <!-- Mobile Top Nav -->
+      <div
+        v-else
+        class="top-nav"
+        style="display: flex; justify-content: space-between;"
+      >
+        <el-link class="logo" href="">
+          OLYMPIA
+          <span class="logo-highlight">
+            INDIVISIBLE
+          </span>
+        </el-link>
+
+        <!-- Nav Open Button -->
+        <el-button
+          id="main-nav-open"
+          @click="openNav"
+        >
+          =
+        </el-button>
+      </div>
+      
+      <!-- Mobile Flyout -->
+      <el-menu
+        id="mobile-flyout"
+        mode="vertical"
+      >
+        <!-- Nav Close Button -->
+        <el-button
+          id="main-nav-close"
+          @click="closeNav"
+        >
+          X
+        </el-button>
+
+        <!-- Home -->
+        <el-menu-item index="1">
+          <el-link href="http://olyind.csevg.com/index.html">Home</el-link>
+        </el-menu-item>
+
+        <!-- Take Action -->
+        <el-sub-menu index="2">
+          <template #title>Take Action</template>
+
+          <el-menu-item index="2-1">
+            <el-link href="https://voter.votewa.gov/portal2023/login.aspx">Register to Vote</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="2-2">
+            <el-link href="http://olyind.csevg.com/take-action.html">Take Action Network</el-link>
+          </el-menu-item>
+        </el-sub-menu>
+
+        <!-- Join Us -->
+        <el-sub-menu index="3">
+          <template #title>Join Us</template>
+
+          <el-menu-item index="3-1">
+            <el-link href="http://olyind.csevg.com/join-us.html#:~:text=STEP%201-,MEMBER%20SIGN%20UP,-Interested%20in%20joining">Member Sign Up</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="3-2">
+            <el-link href="http://olyind.csevg.com/join-us.html#:~:text=NEW%20MEMBER%20ORIENTATION">New Member Orientation</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="3-3">
+            <el-link href="">OI Events Calendar</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="3-4">
+            <el-link href="">OI Programs</el-link>
+          </el-menu-item>
+        </el-sub-menu>
+
+        <!-- Resources -->
+        <el-sub-menu index="4">
+          <template #title>Resources</template>
+
+          <el-menu-item index="4-1">
+            <el-link href="http://olyind.csevg.com/resources.html#guides">Guides</el-link>
+          </el-menu-item>
+
+          <el-menu-item index="4-2">
+            <el-link href="http://olyind.csevg.com/resources.html#reps">Contact Representatives</el-link>
+          </el-menu-item>
+        </el-sub-menu>
+
+        <!-- Donate -->
+        <el-menu-item index="5">
+          <el-link href="https://www.paypal.com/donate/?hosted_button_id=9W5X94XD4GSBG">Donate</el-link>
+        </el-menu-item>
+      </el-menu>        
+      </el-header>
+
+      <el-main>
+        <div class="hero">
+         <h1>
+          Olympia Indivisible Mission Statement
+        </h1>
+        
+        <p class="hero-desc">
+          Olympia Indivisble, founded on January 3, 2017, 
+          is a Washington chapter of the national Indivisible movement.​ <br>
+          We are a 100% volunteer grassroots​ organization located in Congressional District 10. ​
+        </p> 
+        </div>
+
+        <div class="info-mission">
+          <div class="info-mission-head">
+          <h2>Mission</h2>
+          </div>
+            <div class="info-mission-statement">
+            <p>Olympia Indivisible’s mission is to defend our democratic institutions and promote social justice and progressive values.</p>
+            </div>
+        </div>
+
+        <div class="info-mission-columns">
+            <div class="info-mission-column-block">
+              <div class="info-mission-title">
+              <h2>Scope</h2>
+              </div>
+                <div class="info-mission-desc">
+                <p>We encourage citizens to participate in our democracy;</p>
+                <p>We support progressive and resist regressive initiatives and legislation;</p>
+                <p>We empower progressive leadership through involvement in electoral campaigns at the federal, state, and county levels;</p>
+                <p>We amplify political momentum by building coalitions and strive to elevate young, diverse grassroots leadership.</p>
+                </div>
+            </div>
+            <div class="info-mission-column-block">
+              <div class="info-mission-title">
+              <h2>Principles</h2>
+              </div>
+                <div class="info-mission-desc">
+                <p>Broad civic engagement in the democratic process is essential for the survival of a vibrant democracy;</p>
+                <p>In achieving our mission, we will model the values of forbearance, inclusion, tolerance, truth, and fairness.</p>
+                </div>
+            </div>
+          </div>
+      </el-main>
+
+      <el-footer>
+        <div class="info-email">
+          <div class="info-email-title">
+            <h2>GET THE WEEKLY CALL TO ACTION EMAIL</h2>
+            <span>STAY INFORMED</span>
+          </div>
+
+          <p class="info-email-desc">
+            Every Sunday: what's happening this week, what
+            bills are moving, and one thing you can do in
+            15 minutes.
+          </p>
+
+          <el-link
+            class="info-email-link"
+            href="https://olympiaindivisible.substack.com/s/call-to-action"
+            target="_blank"
+          >
+            OLYMPIA INDIVISIBLE SUBSTACK
+            <el-icon>
+              <span class="right-arrow"></span>
+            </el-icon>
+          </el-link>
+        </div>
+
+        <div class="info-link-spam">
+          <el-menu
+            class="info-link-menu"
+            mode="vertical"
+          >
+            <h2>GET INVOLVED</h2>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/join-us.html">
+                Join Us
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/join-us.html#:~:text=NEW%20MEMBER%20ORIENTATION">
+                New Member Orientation
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="">
+                Events Calendar
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="">
+                Action Cafe
+              </el-link>
+            </el-menu-item>
+          </el-menu>
+
+          <el-menu
+            class="info-link-menu"
+            mode="vertical"
+          >
+            <h2>ABOUT</h2>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/mission.html">
+                Mission Statement
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/values.html">
+                Core Values
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="">
+                OI Teams
+              </el-link>
+            </el-menu-item>
+          </el-menu>
+
+          <el-menu
+            class="info-link-menu"
+            mode="vertical"
+          >
+            <h2>RESOURCES</h2>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/resources.html#guides">
+                OI Toolkit
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="https://indivisible.org/resource/guide/">
+                Indivisible Guide
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/resources.html#reps">
+                Contact Representatives
+              </el-link>
+            </el-menu-item>
+          </el-menu>
+
+          <el-menu
+            class="info-link-menu"
+            mode="vertical"
+          >
+            <h2>OLYMPIA INDIVISIBLE</h2>
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/index.html">
+                Home
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="https://www.paypal.com/donate/?hosted_button_id=9W5X94XD4GSBG">
+                Donate
+              </el-link>
+            </el-menu-item>
+
+            <el-menu-item>
+              <el-link href="http://olyind.csevg.com/contact.html">
+                Contact Us
+              </el-link>
+            </el-menu-item>
+          </el-menu>
+        </div>
+
+        <div class="social-row">
+          <el-link 
+            href="https://www.facebook.com/OlympiaIndivisible/"
+            target="_blank"
+          >
+            <el-icon>
+              <svg
+                xmlns="https://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </el-icon>            
+          </el-link>
+
+          <el-link
+            href="https://www.instagram.com/olyindivisiblecoms/"
+            target="_blank"
+          >
+            <el-icon>
+              <svg
+                xmlns="https://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+              </svg>
+            </el-icon>
+          </el-link>
+
+          <el-link
+            href="https://www.youtube.com/@olympiaindivisiblevideos/videos"
+            target="_blank"
+          >
+            <el-icon>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M22.54 6.42a2.77 2.77 0 0 0-1.945-1.957C18.88 4 12 4 12 4s-6.88 0-8.595.463A2.77 2.77 0 0 0 1.46 6.42C1 8.148 1 11.75 1 11.75s0 3.602.46 5.33a2.77 2.77 0 0 0 1.945 1.958C5.121 19.5 12 19.5 12 19.5s6.88 0 8.595-.462a2.77 2.77 0 0 0 1.945-1.958c.46-1.726.46-5.33.46-5.33s0-3.602-.46-5.33ZM9.75 15.021V8.48l5.75 3.271z" />
+              </svg>
+            </el-icon>
+          </el-link>
+        </div>
+
+        <div class="copyright">
+          <p>Congressional Districts 6 & 10</p>
+          <p>Thurston County, WA</p>
+          <p>&copy; Olympia Indivisible</p>
+        </div>
+      </el-footer>
+    </el-container>
+  </div>
+
+
+  <!-- Vue App -->
+  <script>
+    const { createApp, ref } = Vue
+
+    createApp({
+      setup() {
+
+        function openNav() {
+          const topNav = document.querySelector(".top-nav")
+          const main = document.querySelector(".el-main")
+          const nav = document.querySelector("#mobile-flyout")
+
+          topNav.style.filter = "blur(5px)"
+          main.style.filter = "blur(5px)"
+
+          nav.style.display = "block"
+          nav.style.animation = "slideLeft linear forwards"
+        }
+
+        function closeNav() {
+          const topNav = document.querySelector(".top-nav")
+          const main = document.querySelector(".el-main")
+          const nav = document.querySelector("#mobile-flyout")
+
+          topNav.style.removeProperty("filter")
+          main.style.removeProperty("filter")
+
+          nav.style.animation = "slideRight linear forwards"
+          nav.style.display = "none"
+
+          // Waits until animation ends
+          // setTimeout(() => {
+          //   nav.style.display = "none"
+          // }, 1000)
+        }
+
+        return { openNav, closeNav }
+      }
+    })
+    .use(ElementPlus)
+    .use(ElementPlusIconsVue)
+    .mount("#app")
+  </script>
+</body>
+</html>

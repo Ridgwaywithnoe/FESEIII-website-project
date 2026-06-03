@@ -1,0 +1,248 @@
+<!-- OI Join Us -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us - Olympia Indivisible</title>
+
+  <!-- Google Font Setup -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Vue -->
+  <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js"></script>
+
+  <!-- Element Plus -->
+  <script src="https://unpkg.com/element-plus@2.5.6/dist/index.full.js"></script>
+
+  <!-- Element Plus Icons -->
+  <script src="https://unpkg.com/@element-plus/icons-vue@2.3.2/dist/index.iife.js"></script>
+
+  <!-- Element Plus CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.5.6/dist/index.css">
+
+  <!-- Barlow Condensed -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&display=swap">
+
+  <!-- Public Sans -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap">
+
+<!-- Styling stuffs-->
+  <style>
+
+  body {
+    margin:0;
+    background:#FFFAF1;
+    color:#1A2A42;
+    font-family:'Public Sans',sans-serif;
+    }
+
+  header {
+    border-bottom:1px solid #1A2A42;
+    padding:16px
+    }
+
+  .logo {
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;
+    font-size:2rem;
+    }
+
+  .logo span {
+    background:#1A5C8A;
+    color:#fff;
+    padding:.15em .25em;
+    }
+
+  section {
+    padding:4rem 1rem;
+    }
+
+  .hero h1,.section h2 {
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:clamp(2.5rem,5vw,4rem);
+    margin:.5rem 0;
+    }
+
+  .label {
+    font-family:'Barlow Condensed',sans-serif;
+  letter-spacing:.08em;
+  }
+
+  .blue {
+    background:#B6C6DF;
+    }
+
+  .card {
+    border:1px solid #1A2A42;
+    border-radius:12px;
+    padding:2rem;margin-top:1.5rem;
+    }
+
+  .placeholder {
+    background:#d6e0f0;
+    border-radius:12px;
+    padding:3rem 1rem;
+    text-align:center;
+    margin:2rem 0;
+    }
+
+  .button {
+    display:inline-block;
+    background:#1A2A42;
+    color:#fff;
+    padding:1rem 2rem;
+    border-radius:8px;
+    text-decoration:none;
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;
+    }
+
+  input,textarea,select {
+    width:100%;
+    padding:14px;
+    margin:.5rem 0;
+    border:1px solid #1A2A42;
+    background:#FFFAF1;
+    box-sizing:border-box;
+    }
+
+  .info-box {
+    background:#FFFAF1;
+    border-radius:12px;
+    padding:2rem;
+    margin-top:2rem;
+    }
+
+  footer {
+    background:#1A2A42;
+    color:white;
+    padding:3rem 1rem;
+    text-align:center;
+    }
+
+  @media(min-width:768px){
+  section{padding:5rem 10%}
+
+  .program-grid{display:grid;
+  grid-template-columns:1fr 1fr;gap:2rem}
+  }
+
+  //** Calendar// Can't get this to work????**//
+
+  .calendar-embed {
+  background: #FFFAF1;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 2rem 0;
+  overflow: hidden;
+  width: 100%;
+  height: 650px;
+  border: none;
+  border-radius: 8px;
+}
+
+
+//* Mobile Calendar *//
+@media (max-width: 768px) {
+  .calendar-embed iframe {
+    height: 500px;
+  }
+}
+  </style>
+
+</head>
+
+<body>
+<header>
+<div class="logo">OLYMPIA <span>INDIVISIBLE</span></div>
+</header>
+
+<section class="hero">
+  <div class="label">GET INVOLVED</div>
+  <h1>JOIN US</h1>
+  <p>We are a 100% volunteer organization. There's a place for everyone — whether you have 15 minutes a week or want to go deeper. Start here.</p>
+</section>
+
+
+<!-- Step One -->
+<section class="section blue">
+  <div class="label">STEP 1</div>
+  <h2>MEMBER SIGN UP</h2>
+  <p>Interested in joining? Let us know a bit about yourself. For help subscribing, contact oi-tech-help@proton.me.</p>
+  <input placeholder="First Name *">
+  <input placeholder="Last Name *">
+  <input placeholder="Email *">
+  <input placeholder="Zip Code">
+  <textarea rows="4" placeholder="How did you hear about us?"></textarea>
+  <select><option>Areas of Interest</option></select>
+  <br><br>
+  <a class="button" href="#">JOIN OLYMPIA INDIVISIBLE →</a>
+  <div class="info-box">
+  <p>[SUBSTACK EMBED: OLYMPIAINDIVISIBLE.SUBSTACK.COM/EMBED]</p>
+  <p>Review our Mission Statement, Core Values, and Values Agreement.</p>
+  </div>
+</section>
+
+<!-- Step Two -->
+<section class="section">
+  <div class="label">STEP 2</div>
+  <h2>NEW MEMBER ORIENTATION</h2>
+  <p>Second Tuesday of every month. Coffee, training, and a clear next step. Our orientation gives new members an overview
+    of how OI works, how to get plugged into teams, and what to expect.
+  </p>
+  <div class="placeholder">[EMBEDDED SLIDESHOW: POWERPOINT/GOOGLE SLIDES]</div>
+  <a class="button" href="#">RSVP FOR ORIENTATION →</a>
+</section>
+
+<!-- Stay connected/calendar embed -->
+<section class="section blue">
+  <div class="label">STAY CONNECTED</div>
+
+  <h2>OI EVENTS CALENDAR</h2>
+
+  <p>
+    See all OI-related events, trainings, and meetings.
+  </p>
+
+  <div class="calendar-embed">
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=olympiaindivisiblecalendar%40gmail.com&ctz=America%2FLos_Angeles"
+      style="border:0"
+      frameborder="0"
+      scrolling="no"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<!-- Get active -->
+<section class="section">
+  <div class="label">OI PROGRAMS</div>
+  <h2>WAYS TO GET ACTIVE</h2>
+
+  <div class="program-grid">
+    <div class="card">
+    <h3>ACTION CAFE</h3>
+    <p>Mondays at noon. A standing weekly meeting to discuss local action, share updates, and coordinate OI activities
+      Open to all members.</p>
+    <p><strong>LEARN MORE →</strong></p>
+    </div>
+
+  <div class="card">
+    <h3>CAFFEINATED & ACTIVATED</h3>
+    <p>Saturdays at 10am. Informal coffee meetup for members to connect, catch up, and stay energized between action weeks.</p>
+    <p><strong>LEARN MORE →</strong></p>
+  </div>
+
+  </div>
+</section>
+
+<footer>
+<p>Insert footer stuff here</p>
+</footer>
+
+</body>
+</html>
